@@ -1,0 +1,14 @@
+before_script:
+  #- apt-get update -qq && apt-get install -y -qq php
+  #- mkdir -p ~/.ssh && touch ~/.ssh/known_hosts && ssh-keyscan 52.20.182.196 >> ~/.ssh/known_hosts
+  #- chmod 400 server_key.pem
+
+job:
+  script:
+    #- php deployer.phar deploy 
+    - curl -X POST https://gic.itc.edu.kh/deploy
+
+after_script:
+  #- >
+  #  curl https://api.telegram.org/bot566040316:AAEQ0Ivt07f_IDgjv5LnNcJrh58cuWLkhZw/sendMessage -H "Content-Type: application/x-www-form-urlencoded" -d "chat_id=-398460232&text=${GITLAB_USER_NAME}%20committed%20to%20${CI_PROJECT_NAME}%0A%0A%3E%20${CI_COMMIT_MESSAGE}"
+  #- curl -X POST https://gic.itc.edu.kh/deploy

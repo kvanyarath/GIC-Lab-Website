@@ -1,0 +1,55 @@
+.logo_text {
+    /* font-family: cursive; */
+}
+.logo_text_top {
+    font-size: 14px;
+    text-align: center;
+    font-weight: 500;
+}
+
+.logo_text_bottom {
+    text-align: center;
+    font-size: 14px;
+    font-weight: 500;
+    /* line-height: 1; */
+    /* letter-spacing: 8px; */
+    
+}
+
+@media only screen and (min-width: 800px) {
+    .w-20 {
+        -webkit-box-flex: 0;
+          -ms-flex: 0 0 20% !important;
+              flex: 0 0 20% !important;
+        max-width: 20%;
+    }
+    .container-fluid {
+        padding-left: 120px!important;
+        padding-right: 120px!important;
+    }
+    .container-fluid.top-container, .container-fluid.footer-container {
+        padding-left: 60px!important;
+        padding-right: 60px!important;
+    }
+    #slierContainer {
+        height: 500px!important;
+    }
+}
+
+.img-project {
+    max-height: 250px;
+}
+
+.menu-active span, .menu--hover:hover span {
+    /* color: white;
+    background-color: #a61d37;
+    border-radius: 20px; */
+}
+
+.img-cover {
+    object-fit: cover;
+}
+
+.w-90 {
+    width: 90%;
+}

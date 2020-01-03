@@ -1,0 +1,26 @@
+<?php
+
+return array (
+  'actions' => 'សកម្មភាព',
+  'add_new' => 'បន្ថែម​ថ្មី',
+  'are_you_sure' => 'តើ​អ្នក​ប្រាកដ​ឬ​អត់?',
+  'are_you_sure_delete' => 'តើអ្នកប្រាកដជាចង់លុប?',
+  'cancel' => 'បោះបង់',
+  'close' => 'បិទ',
+  'delete' => 'លុប',
+  'delete_confirm' => 'បញ្ជាក់លុប',
+  'delete_question' => 'តើអ្នកប្រាកដជាលុប',
+  'download' => 'ទាញយក',
+  'edit' => 'កែសម្រួល',
+  'error_deleting' => 'មិនអាចលុបបានទេ (Unknown Error)',
+  'is_rtl' => '',
+  'none' => 'គ្មាន',
+  'restore' => 'ស្តារ',
+  'return_to_list' => 'ត្រឡប់ទៅបញ្ជី',
+  'save' => 'រក្សាទុក',
+  'search' => 'ស្វែងរក',
+  'successfully_added_new' => 'បន្ថែមដោយជោគជ័យ',
+  'successfully_deleted' => 'បានលុបចោលដោយជោគជ័យ',
+  'view' => 'មើល',
+  'viewing' => 'មើល',
+);
