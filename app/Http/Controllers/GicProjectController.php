@@ -17,4 +17,9 @@ class GicProjectController extends Controller
         $gic_project = GicProject::findOrFail($id);
         return view('frontend.gic-projects.show', compact('gic_project'));
     }
+
+    public function showJqery($id) {
+        $gic_project['data'] = GicProject::findOrFail($id);
+        return json_encode($gic_project);
+    }
 }

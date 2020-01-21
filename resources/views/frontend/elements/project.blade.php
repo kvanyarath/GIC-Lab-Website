@@ -14,7 +14,7 @@
                     <h3 class="h1 g-color-black mb-4">{{$projects[0]->title}}</h3>
                     <p class="g-color-gray-dark-v4 g-font-size-16">{{$projects[0]->short_description}}</p>
                 </div>
-                <a target="_blank"  class="btn u-btn-outline-primary g-font-weight-600 g-rounded-50 g-px-30 g-py-13" href="/gic-projects/{{$projects[0]->id}}">@lang('see_more')
+                <a  class="btn u-btn-outline-primary g-font-weight-600 g-rounded-50 g-px-30 g-py-13" id="{{$projects[0]->id}}">@lang('see_more')
                     <i class="ml-2 fa fa-long-arrow-right"></i></a>
             </div>
         </div>

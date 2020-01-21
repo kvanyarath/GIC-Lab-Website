@@ -58,7 +58,7 @@
               <ul class="list-inline d-flex align-items-center g-mb-0">
                 <!-- Language -->
                 <li class="list-inline-item ml-auto g-pos-rel ml-lg-auto">
-                
+
                   <a id="language-dropdown-invoker" class=" d-sm-flex align-items-center u-link-v5 g-color-white-opacity-0_7 g-color-white--hover g-font-size-12 text-uppercase g-pl-0 g-pl-10--lg g-pr-10 g-py-15" href="#"
                      aria-controls="language-dropdown"
                      aria-haspopup="true"
@@ -79,7 +79,7 @@
                     @endif
                     <i class="g-ml-3 fa fa-angle-down"></i>
                   </a>
-                  
+
                   <ul id="language-dropdown" class="list-unstyled u-shadow-v39 g-brd-around g-brd-4 g-brd-white g-bg-secondary g-pos-abs g-left-0 g-z-index-99 g-mt-5"
                       aria-labelledby="language-dropdown-invoker">
                     <li class="dropdown-item g-px-0 g-py-2">
@@ -93,7 +93,7 @@
                        <img src="{{asset('img/icon/english_flag_32.png')}}" alt="Khmer Language" width="18">
                        &nbsp; @lang('English')
                       </a>
-                    </li> 
+                    </li>
                   </ul>
                 </li>
                 <!-- End Language -->
@@ -178,7 +178,7 @@
   	@yield('container')
     @include('frontend.elements.gotop')
     @include('layouts.partials.footer')
-    
+
   	<script src="{!! url('/') !!}/unify/html/assets/vendor/jquery/jquery.min.js"></script>
     <script src="{!! url('/') !!}/unify/html/assets/vendor/jquery-migrate/jquery-migrate.min.js"></script>
     <script src="{!! url('/') !!}/unify/html/assets/vendor/popper.js/popper.min.js"></script>
@@ -234,9 +234,10 @@
 
         // initialization of go to
         $.HSCore.components.HSGoTo.init('.js-go-to');
-        
+
       });
     </script>
+
     @yield('script')
   </body>
 </html>

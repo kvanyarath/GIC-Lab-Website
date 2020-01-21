@@ -47,17 +47,19 @@
                             href="#">Register now</a>
                     </div> -->
                 </div>
-                <a target="_blank" class="u-link-v2" href="/events/{{$event->id}}"></a>
+                <a target="_blank" class="u-link-v2" id="event{{$event->id}}"></a>
             </li>
             <!-- End Events Item -->
             @endforeach
         </ul>
         <!-- End More Events List -->
 
-        <div class="text-center">
-            <a target="_blank" class="btn u-shadow-v33 g-color-white g-color-white--hover g-bg-primary g-bg-main--hover g-rounded-30 g-px-25 g-py-10"
-                href="/events"><i class="fa fa-eye fa-fw"></i> View all Events</a>
-        </div>
+        @if (count($events)>5)
+            <div class="text-center">
+                <a target="_blank" class="btn u-shadow-v33 g-color-white g-color-white--hover g-bg-primary g-bg-main--hover g-rounded-30 g-px-25 g-py-10"
+                    href="/events"><i class="fa fa-eye fa-fw"></i> View all Events</a>
+            </div>
+        @endif
     </div>
 </div>
 <!-- End Events -->
