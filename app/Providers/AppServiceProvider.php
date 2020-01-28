@@ -90,26 +90,26 @@ class AppServiceProvider extends ServiceProvider
             // ["label" => "Timetable", "url_name"=> '/timetable'],
             // ["label" => "Academic Calendar", "url_name"=> '/calendar'],
             ["label" => "GIC's Reports", "url_name"=> '/gic-report'],
-            ["label" => "Students & Alumni", "url_name"=> '/alumni-list'],
+            // ["label" => "Students & Alumni", "url_name"=> '/alumni-list'],
 
             // ["label" => "Students", "url_name"=> ''],
-            ["label" => "Students' Notable Works", "url_name"=> '/student-project'],
-            ["label" => "What alumni say about GIC?", "url_name"=> '/studentMessage'],
-            ["label" => "Awardees", "url_name"=> '/awardee'],
-            ["label" => "Scholarships", "url_name"=> '/scholarships'],
+            // ["label" => "Students' Notable Works", "url_name"=> '/student-project'],
+            // ["label" => "What alumni say about GIC?", "url_name"=> '/studentMessage'],
+            // ["label" => "Awardees", "url_name"=> '/awardee'],
+            // ["label" => "Scholarships", "url_name"=> '/scholarships'],
 
 
             ["label" => __('partner_type.University'), "url_name"=> '/partners/University'],
             ["label" => __('partner_type.Company'), "url_name"=> '/partners/Company'],
-            ["label" => "Video gallery", "url_name"=> '/gallery/videos'],
-            ["label" => "Photo gallery", "url_name"=> '/gallery/photos'],
+            // ["label" => "Video gallery", "url_name"=> '/gallery/videos'],
+            // ["label" => "Photo gallery", "url_name"=> '/gallery/photos'],
             // ["label" => "What others say about us?", "url_name"=> ''],
-            ["label" => "News", "url_name"=> '/news'],
+            // ["label" => "News", "url_name"=> '/news'],
             // ["label" => "Seminars", "url_name"=> '/events'],
-            ["label" => "Posters", "url_name"=> '/posters'],
+            // ["label" => "Posters", "url_name"=> '/posters'],
             ["label" => "FAQs", "url_name"=> '/faqs'],
             ["label" => "GIC Service", "url_name"=> '/gic-service'],
-            ["label" => "Others", "url_name"=> '/importantLink'],
+            // ["label" => "Others", "url_name"=> '/importantLink'],
 
         ];
 
