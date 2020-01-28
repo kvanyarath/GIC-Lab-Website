@@ -2,7 +2,7 @@
 
 @section('container')
 @include('frontend.partials.breadcrumb', ['title' => __('projects')])
-@include('frontend.partials.title', ['title' => __('projects')])
+@include('frontend.partials.title', ['title' => __('NLP Projects')])
 
 <div class="container-fluid g-mb-100">
 
