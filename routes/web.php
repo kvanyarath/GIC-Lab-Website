@@ -1,7 +1,7 @@
 <?php
 
-/**  FRONTED ROUTE 
- * -- ex: route('frontend.homepage') // for homepage url. 
+/**  FRONTED ROUTE
+ * -- ex: route('frontend.homepage') // for homepage url.
  * -- ex: route('frontend.scholarship.index' // for scholarship page.
  **/
 Route::group(['middleware' => ['locale']],function () {
@@ -11,7 +11,7 @@ Route::group(['middleware' => ['locale']],function () {
 
         Route::get('contact-us', 'ContactUsController@index')->name('contactUs'); // for page contactUs
         Route::post('contact-us','ContactUsController@storeQuestion')->name('postContactUs');; // for page contactUs submit message
-        Route::get('about-us','HomeController@aboutUs')->name('aboutUs'); // for page aboutUs 
+        Route::get('about-us','HomeController@aboutUs')->name('aboutUs'); // for page aboutUs
         Route::get('scholarship/{link}','ScholarshipController@page_tab')->name('scholarship_alumini'); // for page scholarship
         Route::get('scholarship', 'ScholarshipController@index')->name('scholarship.index'); // for page scholarship
 
@@ -64,7 +64,7 @@ Route::group(['middleware' => ['locale']],function () {
         Route::get('visions','HomeController@vision')->name('vision');
 
         Route::get('logout', 'Auth\LoginController@logout')->name('logout');
-        
+
         Route::get('locale/{locale}', function($locale) {
             session(['locale' => $locale]);
             return back();
@@ -72,10 +72,13 @@ Route::group(['middleware' => ['locale']],function () {
 
         // partners
         Route::get('partners/{type}', 'PartnerController@getIndex');
-        
+
         // events
         Route::get('events', 'EventController@getIndex')->name('seminar');
         Route::get('events/{id}', 'EventController@getEventDetail');
+
+        // events jqery
+        Route::get('events-jquery/{id}', 'EventController@getEventDetailJqery');
 
         // gallery videos and photos
         Route::get('gallery/photos', 'GalleryController@getPhotos')->name('gallery.photo');
@@ -100,9 +103,18 @@ Route::group(['middleware' => ['locale']],function () {
         // site content
         Route::get('site-content/{name}', 'SiteContentController@getPageByName');
 
+        // site content for Jqery
+        Route::get('site-content-jqery/{name}', 'SiteContentController@getPageByNameJqery');
+
+
         // gic project
         Route::get('gic-projects', 'GicProjectController@index')->name('project');
+        Route::get('gic-projects/completed', 'GicProjectController@projectComplete')->name('project');
+        Route::get('gic-projects/processing', 'GicProjectController@projectrocessing')->name('project');
         Route::get('gic-projects/{id}', 'GicProjectController@show');
+
+        //Jqery gic project
+        Route::get('gic-projects-jqery/{id}', 'GicProjectController@showJqery');
     });
     Auth::routes(['register' => false]);
 });
@@ -111,7 +123,7 @@ Route::group(['middleware' => ['locale']],function () {
 
 /**
  * BACKEND OR ADMIN ROUTE SECTION
- * 
+ *
  *
  * write ROUTE that have controller in "Backend" folder here!!!
  * ++++++++++++++ */
@@ -119,7 +131,7 @@ Route::namespace('Backend')->prefix('admin')->name('admin.')->group(function () 
     Route::get('contactus-message/{id}/setMark','ContactUsMessageController@setMark')->name('set-mark');
 });
 
-/** 
+/**
  * Admin without namespace `Backend`
  * ++++++++++++++ */
 Route::group(['prefix' => 'admin'], function () {
@@ -142,7 +154,7 @@ Route::group(['prefix' => 'admin'], function () {
 
 // ****************************************************************//
 // IMPORTANT *** THIS ROUTE SHOULD BE IN 1 of the GROUP ROUTE ABOVE //
-// ****************************************************************// 
+// ****************************************************************//
 Route::post('admin/scholarship-alumini/{id}/edit','Backend\ScholarshipAlumniController@edit')->name('scholarship_alumini');
 Route::get('/MissionVision','MissionVision@index');
 

@@ -13,8 +13,22 @@ class GicProjectController extends Controller
         return view('frontend.gic-projects.index', compact('gic_projects'));
     }
 
+    public function projectComplete() {
+        $gic_projects = GicProject::orderBy('created_at', 'DESC')->where('ongoing_project','=', 0)->paginate(4);
+        return view('frontend.gic-projects.index', compact('gic_projects'));
+    }
+    public function projectrocessing() {
+        $gic_projects = GicProject::orderBy('created_at', 'DESC')->where('ongoing_project','=', 1)->paginate(4);
+        return view('frontend.gic-projects.index', compact('gic_projects'));
+    }
+
     public function show($id) {
         $gic_project = GicProject::findOrFail($id);
         return view('frontend.gic-projects.show', compact('gic_project'));
+    }
+
+    public function showJqery($id) {
+        $gic_project['data'] = GicProject::findOrFail($id);
+        return json_encode($gic_project);
     }
 }
