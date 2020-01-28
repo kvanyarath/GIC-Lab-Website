@@ -6,7 +6,7 @@
     <div class="g-bg-img-hero " style="background-image: url(assets/include/svg/svg-bg1.svg);">
         <!-- Heading -->
         <div class="g-max-width-645 text-center mx-auto g-pt-60 g-mb-60">
-            <h2 class="h1 mb-3">Faculty Staffs</h2>
+            <h2 class="h1 mb-3">Researcher</h2>
             <!-- <p>...</p> -->
         </div>
         {{--        End Heading--}}

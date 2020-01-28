@@ -109,6 +109,8 @@ Route::group(['middleware' => ['locale']],function () {
 
         // gic project
         Route::get('gic-projects', 'GicProjectController@index')->name('project');
+        Route::get('gic-projects/completed', 'GicProjectController@projectComplete')->name('project');
+        Route::get('gic-projects/processing', 'GicProjectController@projectrocessing')->name('project');
         Route::get('gic-projects/{id}', 'GicProjectController@show');
 
         //Jqery gic project
