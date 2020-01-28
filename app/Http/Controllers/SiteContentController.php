@@ -12,4 +12,8 @@ class SiteContentController extends Controller
         $data = SiteContent::withTranslations()->where('developer_name', $name)->firstOrFail()->translate();
         return view('frontend.site-content.page', compact('data'));
     }
+    public function getPageByNameJqery($name) {
+        $sitedata['data'] = SiteContent::withTranslations()->where('developer_name', $name)->firstOrFail()->translate();
+        return json_encode($sitedata);
+    }
 }

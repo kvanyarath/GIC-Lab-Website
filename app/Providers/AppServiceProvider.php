@@ -36,42 +36,44 @@ class AppServiceProvider extends ServiceProvider
             ["name" => __("Youtube"), "icon"=>"fa-youtube", "url"=>"https://www.youtube.com/channel/UCojYsgDYb92lQoV0lpz-jvQ"],
             ["name" => __("Linkdin"), "icon"=>"fa-linkedin", "url"=>"#"],
         ];
-
         $menus = [
             ["label" => 'Home', 'url_name' => 'frontend.homepage'],
-            ["label" => "about_gic", "url_name"=> 'frontend.aboutUs', 'submenu' => [
+            ["label" => "NLP project", "submenu" => [
+                // ["label" => "Incubation Center", "url_name"=> 'frontend.incubator', 'url' =>'/site-content/incubation'],
+                ["label" => 'List all projects', "url_name"=> 'frontend.project'],
+            ]],
+
+            ["label" => "Researchers", "submenu" => [
+                ["label" => "staff", "url" => "/gic-staff", "url_name" => ""],
+                // ["label" => "staff_mobility", "url" => "/staffMobility", "url_name" => ""],
+                // ["label" => "guest_lecturer_researcher", "url" => "/invited-professors", "url_name" => ""],
+            ]],
+
+            ["label" => "About", "url_name"=> 'frontend.aboutUs', 'submenu' => [
                 ["label" => "who_we_are", "url_name"=> 'frontend.whoWeAre'],
                 ["label" => "missions", "url_name"=> 'frontend.mission'],
                 ["label" => "visions", "url_name"=> 'frontend.vision'],
                 ["label" => "Our Service", "url_name"=> '', 'url' => '/gic-service'],
             ]],
 
-            ["label" => "programs", "url_name"=> 'frontend.program','submenu' => $this->getProgramSubmenu()
-            ],
-            ["label" => "research", "url_name"=> 'frontend.research', 'submenu' => [
-                ["label" => "Laboratory", "url_name"=> 'frontend.who_we_are', 'submenu' => [
-                    ["label" => "Khmer NLP Lab", "url_name"=> 'frontend.who_we_are', 'url' => '/site-content/lab_khmer_nlp'],
-                    ["label" => "Data Analysis and Data Security Lab", "url_name"=> 'frontend.missions', 'url' => '/site-content/lab_dads'],
-                ]],
-                ["label" => "Publications", "url_name"=> 'frontend.missions', "url" => '/site-content/publications'],
-                ["label" => "Software & Tools", "url_name"=> 'frontend.visions', "url" => '/site-content/software_and_tools'],
-                // ["label" => "Researchers", "url_name"=> 'frontend.visions'],
-            ]],
-            ["label" => "project", "submenu" => [
-                ["label" => "Incubation Center", "url_name"=> 'frontend.incubator', 'url' =>'/site-content/incubation'],
-                ["label" => 'Others', "url_name"=> 'frontend.project'],
-            ]],
+            // ["label" => "programs", "url_name"=> 'frontend.program','submenu' => $this->getProgramSubmenu()
+            // ],
+            // ["label" => "research", "url_name"=> 'frontend.research', 'submenu' => [
+            //     ["label" => "Laboratory", "url_name"=> 'frontend.who_we_are', 'submenu' => [
+            //         ["label" => "Khmer NLP Lab", "url_name"=> 'frontend.who_we_are', 'url' => '/site-content/lab_khmer_nlp'],
+            //         ["label" => "Data Analysis and Data Security Lab", "url_name"=> 'frontend.missions', 'url' => '/site-content/lab_dads'],
+            //     ]],
+            //     ["label" => "Publications", "url_name"=> 'frontend.missions', "url" => '/site-content/publications'],
+            //     ["label" => "Software & Tools", "url_name"=> 'frontend.visions', "url" => '/site-content/software_and_tools'],
+            //     // ["label" => "Researchers", "url_name"=> 'frontend.visions'],
+            // ]],
             // ["label" => "incubator", "url_name"=> 'frontend.incubator', '/site-content/incubation'],
-            ["label" => "calendar", "submenu" => [
-                ["label" => "academic_calendar", "url_name"=> '', 'url' => '/calendar'],
-                ["label" => "seminar_event", "url_name"=> 'frontend.seminar'],
-                ["label" => "timetable", "url_name"=> '', 'url' => 'timetable'],
-            ]],
-            ["label" => "faculty_stuff", "submenu" => [
-                ["label" => "staff", "url" => "/gic-staff", "url_name" => ""],
-                ["label" => "staff_mobility", "url" => "/staffMobility", "url_name" => ""],
-                ["label" => "guest_lecturer_researcher", "url" => "/invited-professors", "url_name" => ""],
-            ]],
+            // ["label" => "calendar", "submenu" => [
+            //     ["label" => "academic_calendar", "url_name"=> '', 'url' => '/calendar'],
+            //     ["label" => "seminar_event", "url_name"=> 'frontend.seminar'],
+            //     ["label" => "timetable", "url_name"=> '', 'url' => 'timetable'],
+            // ]],
+
         ];
         // FAQ -> Contact US -> Sing in -> Search
         $topmenus = [
@@ -90,26 +92,26 @@ class AppServiceProvider extends ServiceProvider
             // ["label" => "Timetable", "url_name"=> '/timetable'],
             // ["label" => "Academic Calendar", "url_name"=> '/calendar'],
             ["label" => "GIC's Reports", "url_name"=> '/gic-report'],
-            ["label" => "Students & Alumni", "url_name"=> '/alumni-list'],
+            // ["label" => "Students & Alumni", "url_name"=> '/alumni-list'],
 
             // ["label" => "Students", "url_name"=> ''],
-            ["label" => "Students' Notable Works", "url_name"=> '/student-project'],
-            ["label" => "What alumni say about GIC?", "url_name"=> '/studentMessage'],
-            ["label" => "Awardees", "url_name"=> '/awardee'],
-            ["label" => "Scholarships", "url_name"=> '/scholarships'],
+            // ["label" => "Students' Notable Works", "url_name"=> '/student-project'],
+            // ["label" => "What alumni say about GIC?", "url_name"=> '/studentMessage'],
+            // ["label" => "Awardees", "url_name"=> '/awardee'],
+            // ["label" => "Scholarships", "url_name"=> '/scholarships'],
 
 
             ["label" => __('partner_type.University'), "url_name"=> '/partners/University'],
             ["label" => __('partner_type.Company'), "url_name"=> '/partners/Company'],
-            ["label" => "Video gallery", "url_name"=> '/gallery/videos'],
-            ["label" => "Photo gallery", "url_name"=> '/gallery/photos'],
+            // ["label" => "Video gallery", "url_name"=> '/gallery/videos'],
+            // ["label" => "Photo gallery", "url_name"=> '/gallery/photos'],
             // ["label" => "What others say about us?", "url_name"=> ''],
-            ["label" => "News", "url_name"=> '/news'],
+            // ["label" => "News", "url_name"=> '/news'],
             // ["label" => "Seminars", "url_name"=> '/events'],
-            ["label" => "Posters", "url_name"=> '/posters'],
+            // ["label" => "Posters", "url_name"=> '/posters'],
             ["label" => "FAQs", "url_name"=> '/faqs'],
             ["label" => "GIC Service", "url_name"=> '/gic-service'],
-            ["label" => "Others", "url_name"=> '/importantLink'],
+            // ["label" => "Others", "url_name"=> '/importantLink'],
 
         ];
 

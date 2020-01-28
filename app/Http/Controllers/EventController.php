@@ -18,4 +18,8 @@ class EventController extends Controller
         $event = Event::withTranslations()->findOrFail($id);
         return view('frontend.events.event_detail', compact('event'));
     }
+    public function getEventDetailJqery($id) {
+        $event['data'] = Event::withTranslations()->findOrFail($id);
+        return json_encode($event);
+    }
 }

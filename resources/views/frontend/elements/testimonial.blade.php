@@ -38,8 +38,10 @@
         <!-- End Testimonials -->
         @endforeach
         </div>
-        <div style="position: absolute; right: 20px; bottom: 20px;">
-            <a href="/studentMessage" class="btn btn-primary btn-xs"><i class="fa fa-eye fa-fw"></i> See More</a>
-        </div>
+        @if (count($student_messages) > 4)
+            <div style="position: absolute; right: 20px; bottom: 20px;">
+                <a href="/studentMessage" class="btn btn-primary btn-xs"><i class="fa fa-eye fa-fw"></i> See More</a>
+            </div>
+        @endif
     </div>
 </div>
