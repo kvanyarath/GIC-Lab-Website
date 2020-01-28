@@ -13,7 +13,7 @@
   .gray-indicator span {
     border-color: grey;
   }
-  
+
 </style>
 @endsection
 @section('container')
@@ -137,9 +137,9 @@
       <!-- End Find a Course -->
 
       <!-- Remove Comment to enable Learn First Steps -->
-     
+
         @include('frontend.elements.firstStep')
-       
+
       <!-- End Learn First Steps -->
 
       <!-- Remove Comment to enable  Researches -->
@@ -149,31 +149,31 @@
       <!-- End Research Statistics -->
 
       <!-- Testimonials -->
-     
+
       @include('frontend.elements.testimonial')
-     
+
       <!-- End Testimonials -->
 
       <!-- projects -->
       @include('frontend.elements.project')
       <!-- end projects -->
       <!-- Events -->
-     
+
       @include('frontend.elements.events')
-     
+
       <!-- End Events -->
 
       <!-- News -->
-     
+
       @include('frontend.elements.news2')
-     
+
       <!-- End News -->
-      @if (!empty($company_partners)) 
+      @if (!empty($company_partners))
         @include('frontend.elements.partners', ['title' => __('company_partners'), 'data' => $company_partners, 'type' => 'Company'])
       @endif
       @if (!empty($university_partners))
       @include('frontend.elements.partners', ['title' => __('university_partners'), 'data' => $university_partners, 'type' => 'University'])
       @endif
-     
+
     </main>
 @endsection
